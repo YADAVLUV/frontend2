@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time Display</title>
+</head>
+<body>
+    <h1>Date and Time Display</h1>
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+
+    <p id="display"></p>
+
+    <script>
+        function showDate() {
+            const currentDate = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = currentDate.toLocaleDateString(undefined, dateOptions);
+            document.getElementById('display').textContent = "Current Date: " + formattedDate;
+        }
+
+        function showTime() {
+            const currentTime = new Date();
+            const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const formattedTime = currentTime.toLocaleTimeString(undefined, timeOptions);
+            document.getElementById('display').textContent = "Current Time: " + formattedTime;
+        }
+    </script>
+    <h1><a href="task6.html">task6</a></h1>
+</body>
+</html>
